@@ -25,3 +25,7 @@
 .Close {
   transform: rotateX(-100%);
 }
+
+.Logo {
+  height: 11%;
+}
