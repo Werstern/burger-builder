@@ -85,6 +85,7 @@ class contactData extends Component {
           ]
         },
         value: '',
+        validation: {},
         valid: true
       },
     },
@@ -116,6 +117,9 @@ class contactData extends Component {
 
   checkValidaty(value, rules) {
     let isValid = true;
+    //if (!rules) {
+    //  return true
+    //}
 
     if (rules.required) {
       isValid = value.trim() !== '' && isValid;
@@ -148,7 +152,7 @@ class contactData extends Component {
     for (let inputIdentifier in updatedOrderForm) {
       formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
     }
-    
+
     this.setState({orderForm: updatedOrderForm, formIsValid: formIsValid});
   }
 
